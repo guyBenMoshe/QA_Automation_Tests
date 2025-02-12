@@ -21,3 +21,9 @@ jobs:
 
       - name: Run tests
         run: python run_tests.py # הפעלת הבדיקות
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: report.html # העלאת הדוח שנוצר בסיום הבדיקות
