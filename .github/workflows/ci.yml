@@ -23,7 +23,7 @@ jobs:
         run: python run_tests.py # הפעלת הבדיקות
 
       - name: Upload test report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: report.html # העלאת הדוח שנוצר בסיום הבדיקות
+          path: report.html # העלאת הדוח שנוצר ל-GitHub
