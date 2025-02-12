@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3 # שליפת הקוד מ-GitHub
+        uses: actions/checkout@v4 # שליפת הקוד מ-GitHub
 
       - name: Set up Python
-        uses: actions/setup-python@3
+        uses: actions/setup-python@v4
         with:
           python-version: "3.9" # הגדרת גרסת פייתון
 
@@ -23,7 +23,7 @@ jobs:
         run: python run_tests.py # הפעלת הבדיקות
 
       - name: Upload test report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: report.html # העלאת הדוח שנוצר ל-GitHub
